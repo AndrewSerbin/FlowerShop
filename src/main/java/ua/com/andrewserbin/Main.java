@@ -1,6 +1,11 @@
 package ua.com.andrewserbin;
 
-import java.util.ArrayList;
+import ua.com.andrewserbin.model.entity.accessory.Basket;
+import ua.com.andrewserbin.model.entity.accessory.Ribbon;
+import ua.com.andrewserbin.model.entity.accessory.Wrapper;
+import ua.com.andrewserbin.model.entity.boquet.*;
+import ua.com.andrewserbin.model.entity.plant.Flower;
+import ua.com.andrewserbin.model.entity.plant.FlowerType;
 
 /**
  * Hello world!
@@ -8,6 +13,6 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main( String[] args ) {
-        System.out.println( "Hello World!" );
+
     }
 }
