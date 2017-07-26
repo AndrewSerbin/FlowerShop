@@ -14,7 +14,7 @@ import ua.com.andrewserbin.model.entity.plant.FlowerType;
 public class BuilderTest {
 
     static String DEFAULT = "Default";
-
+    
     @Test (expected = IncompleteBouquetInitialization.class)
     public void buildBouquetWithoutEvent() throws Exception {
         Bouquet bouquet = Bouquet.getBuilder()
