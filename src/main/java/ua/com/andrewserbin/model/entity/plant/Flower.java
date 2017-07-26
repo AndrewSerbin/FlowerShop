@@ -7,8 +7,14 @@ public class Flower extends Plant {
 
     private FlowerType type;
 
-    public Flower(String name, FlowerType type) {
+    private boolean needFeed;
+
+    private boolean needSupport;
+
+    public Flower(String name, FlowerType type, boolean needFeed, boolean needSupport) {
         super(name);
         this.type = type;
+        this.needFeed = needFeed;
+        this.needSupport = needSupport;
     }
 }
