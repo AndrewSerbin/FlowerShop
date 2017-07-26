@@ -5,7 +5,6 @@ import ua.com.andrewserbin.model.entity.accessory.Ribbon;
 import ua.com.andrewserbin.model.entity.accessory.Wrapper;
 import ua.com.andrewserbin.model.entity.boquet.util.IncompleteBouquetInitialization;
 import ua.com.andrewserbin.model.entity.plant.Flower;
-
 import java.util.ArrayList;
 
 /**
