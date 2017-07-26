@@ -16,9 +16,8 @@ public class BuilderTest {
     static String DEFAULT = "Default";
 
     @Test (expected = IncompleteBouquetInitialization.class)
-    public void build() throws Exception {
+    public void buildBouquetWithoutEvent() throws Exception {
         Bouquet bouquet = Bouquet.getBuilder()
-                .setEvent(Event.ALL)
                 .setFreshness(Freshness.BAD)
                 .setPrice(Price.CHEAP)
                 .setSize(Size.MEDIUM)
