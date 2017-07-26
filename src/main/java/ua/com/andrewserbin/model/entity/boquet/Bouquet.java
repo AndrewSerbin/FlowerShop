@@ -3,6 +3,7 @@ package ua.com.andrewserbin.model.entity.boquet;
 import ua.com.andrewserbin.model.entity.accessory.Basket;
 import ua.com.andrewserbin.model.entity.accessory.Ribbon;
 import ua.com.andrewserbin.model.entity.accessory.Wrapper;
+import ua.com.andrewserbin.model.entity.boquet.util.IncompleteBouquetInitialization;
 import ua.com.andrewserbin.model.entity.plant.Flower;
 
 import java.util.ArrayList;
@@ -87,11 +88,43 @@ public class Bouquet {
             return this;
         }
 
-        public Bouquet build() {
+        public Bouquet build() throws IncompleteBouquetInitialization {
+            boolean incompleteBouquetInitialization = checkEventForNull() || checkFreshnessForNull()
+                    || checkPriceForNull() || checkSizeForNull() || checkStemLengthForNull()
+                    || checkFlowersForNull() || checkFlowersForZeroCapacity();
+            if (incompleteBouquetInitialization) {
+                throw new IncompleteBouquetInitialization();
+            }
 
-//            boolean completeBouquetInitialization = event != null
-//            if ()
             return Bouquet.this;
+        }
+
+        private boolean checkEventForNull() {
+            return Bouquet.this.event == null;
+        }
+
+        private boolean checkFreshnessForNull() {
+            return Bouquet.this.freshness == null;
+        }
+
+        private boolean checkPriceForNull() {
+            return Bouquet.this.price == null;
+        }
+
+        private boolean checkSizeForNull() {
+            return Bouquet.this.size == null;
+        }
+
+        private boolean checkStemLengthForNull() {
+            return Bouquet.this.stemLength == null;
+        }
+
+        private boolean checkFlowersForNull() {
+            return Bouquet.this.flowers == null;
+        }
+
+        private boolean checkFlowersForZeroCapacity() {
+            return Bouquet.this.flowers.size() == 0;
         }
     }
 
