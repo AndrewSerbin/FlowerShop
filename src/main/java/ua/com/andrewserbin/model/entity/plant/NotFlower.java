@@ -11,4 +11,12 @@ public class NotFlower extends Plant {
         super(name);
         this.type = type;
     }
+
+    public NotFlowerType getType() {
+        return type;
+    }
+
+    public void setType(NotFlowerType type) {
+        this.type = type;
+    }
 }
