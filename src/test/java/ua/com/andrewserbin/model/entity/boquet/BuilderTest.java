@@ -13,8 +13,8 @@ import ua.com.andrewserbin.model.entity.plant.FlowerType;
  */
 public class BuilderTest {
 
-    static String DEFAULT = "Default";
-    
+    static String DEFAULT_NAME = "Default";
+
     @Test (expected = IncompleteBouquetInitialization.class)
     public void buildBouquetWithoutEvent() throws Exception {
         Bouquet bouquet = Bouquet.getBuilder()
@@ -22,11 +22,11 @@ public class BuilderTest {
                 .setPrice(Price.CHEAP)
                 .setSize(Size.MEDIUM)
                 .setStemLength(StemLength.LONG)
-                .setFlowers(new Flower(DEFAULT, FlowerType.MULTI_FLOWER,
-                        true, true))
-                .setBasket(new Basket(DEFAULT))
-                .setRibbon(new Ribbon(DEFAULT))
-                .setWrapper(new Wrapper(DEFAULT))
+                .setFlowers(new Flower(FlowerExample.ROSE.name(), FlowerExample.ROSE.getType(),
+                        FlowerExample.ROSE.isNeedFeed(), FlowerExample.ROSE.isNeedSupport()))
+                .setBasket(new Basket(DEFAULT_NAME))
+                .setRibbon(new Ribbon(DEFAULT_NAME))
+                .setWrapper(new Wrapper(DEFAULT_NAME))
                 .build();
     }
 
