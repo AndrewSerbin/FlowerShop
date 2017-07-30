@@ -5,4 +5,11 @@ package ua.com.andrewserbin.model.entity.boquet.util;
  */
 public class IncompleteBouquetInitialization extends Exception {
 
+    public IncompleteBouquetInitialization() {
+
+    }
+
+    public IncompleteBouquetInitialization(String message) {
+        super(message);
+    }
 }
