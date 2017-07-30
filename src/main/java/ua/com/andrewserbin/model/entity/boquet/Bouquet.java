@@ -91,6 +91,7 @@ public class Bouquet {
             boolean incompleteBouquetInitialization = checkEventForNull() || checkFreshnessForNull()
                     || checkPriceForNull() || checkSizeForNull() || checkStemLengthForNull()
                     || checkFlowersForNull() || checkFlowersForZeroCapacity();
+
             if (incompleteBouquetInitialization) {
                 throw new IncompleteBouquetInitialization();
             }
